@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react'
 const useFetch = () => {
   const [apiData, setApiData] = useState()
   //const baseUrl = 'http://localhost:8080/api/v1'
-  const baseUrl =process.env.VITE_API_URL
+  const baseUrl =import.meta.env.VITE_API_URL
   const getApi = useCallback(async (path) => {
     const url = `${baseUrl}${path}`
     try {
